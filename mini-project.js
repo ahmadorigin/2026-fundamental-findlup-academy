@@ -46,14 +46,8 @@ let tentukanUmur = (name, umur) => umur>=17 ? "Dewasa" : "Belum Dewasa";
 
 // Tugas 3 -- Menampilkan Angka Kelipatan 5
 
-for(let a=1; a<=10; a++) {
-    const kelipatan = 5*a;
-
-    for(let i=1; i<=50; i++) {
-        if(i === kelipatan) {
-          // console.log(`7 x ${a} = ${i}`);
-        }
-    };
+for(let i=5; i<=50; i+=5) {
+    console.log(i);
 };
 
 // Tugas 4 -- Simulasi Lampu Lalu Lintas
@@ -67,5 +61,4 @@ const lampuLalin = (color) => {
 	console.log('Jalan');
     }
 };
-
-lampuLalin('Merah');
+// lampuLalin('Merah');
