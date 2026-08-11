@@ -78,14 +78,8 @@ console.log("\n# Tugas 4 -- No Thanks");
 
 let number = [1,2];
 
-for(let i=0; ; i++) {
-	let angkaBerikutnya = number[number.length-1] + number[number.length-2];
-
-	if (angkaBerikutnya >= 100){
-		break;
-	}
-
+for(let i=2; i<10; i++) {
+	let angkaBerikutnya = number[i-1] + number[i-2];
+	console.log(angkaBerikutnya);
 	number.push(angkaBerikutnya);
 };
-
-console.log(number);
