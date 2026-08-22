@@ -36,7 +36,7 @@ async function main() {
         const choice = await tanya("Anda: ");
         const idx = produk.findIndex((p) => p.nama === choice);
         if (idx !== -1) {
-          produkDiBeli.push(choice);
+          produkDiBeli.push(produk[idx]);
 
           reChoice = false;
         } else {
@@ -60,14 +60,19 @@ async function main() {
           "Ngawi: Dengan total harga yang harus di bayar: Rp " + totalHarga,
         );
 
-        const reTransfer = false;
+        let reTransfer = false;
 
         do {
           const bayar = await tanya(
             "Ngawi: Transfer pembayaran mu dengan memberi nominal total harga: \n\nTransfer: ",
           );
 
-          if (bayar === totalHarga) reTransfer = false;
+          if (bayar != totalHarga) {
+            console.log(
+              "\n\nTRANSFER TIDAK DI KETAHUI, Tolong input nominal dengan benar\n",
+            );
+            reTransfer = true;
+          }
         } while (reTransfer);
 
         console.log("Ngawi: Transfer anda berhasil... (tunggu sebentar)");
@@ -81,7 +86,7 @@ async function main() {
       }
     } else {
       console.log("Ngawi: Saya kurang paham maksud Anda");
-      console.log("Ngawi: Apakah ada pertanyaan lain?");
+      isExit = false;
     }
   } while (!isExit);
 
