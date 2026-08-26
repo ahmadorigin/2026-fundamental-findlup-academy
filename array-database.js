@@ -13,14 +13,15 @@ for(let i=0; i<produk.length; i++) {
 	console.log(`${produk[i].nama}: Rp ${produk[i].harga} (stok ${produk[i].stock})`);
 }
 
-console.log('\n# Praktik 1 -- Create dan Update\n');
+console.log('\n# Praktik 2 -- Create dan Update\n');
 
 produk.push({ nama: 'Kopi', harga: 5000, stock: 30 });
 
 const idx = produk.findIndex((p) => p.nama === 'Minyak');
 if(idx !== -1) produk[idx].stock = 10;
 
-console.log(produk.length);
+console.log(`Data terbaru:`);
+console.table(produk);
 
 console.log('\n# Praktik 3 -- Filter Stok Menipis\n');
 
@@ -74,6 +75,7 @@ console.log('\n# Tugas 4 -- Total Nilai Stok\n');
 let coba = produk.reduce((total, p) => total + p.harga * p.stock, 0);
 console.log('Total nilai: ' + coba);
 
+console.clear();
 console.log('\n# Tugas 5 (Tantangan) -- Pencarian Produk\n');
 
 const cari = (key) => produk.filter( p => p.nama.toLowerCase().includes(key.toLowerCase()));

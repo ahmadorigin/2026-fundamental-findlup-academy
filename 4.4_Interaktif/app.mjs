@@ -79,7 +79,7 @@ async function main() {
         await tunggu(3000);
         console.log("Ngawi: Ini barang anda.");
 
-        produkDiBeli.push({ "Total Harga": totalHarga });
+        produkDiBeli.push({}, { nama: "Total Harga", harga: totalHarga });
         console.table(produkDiBeli);
 
         isExit = true;

@@ -54,7 +54,8 @@ function cariBuku(key) {
 pinjamBuku('janji');
 // urutanTerbaru();
 
-
 //tampilkanSemua();
 //bukuTersedia();
 cariBuku('i');
+
+console.clear();

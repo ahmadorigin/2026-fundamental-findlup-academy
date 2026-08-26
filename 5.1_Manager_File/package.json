@@ -1,0 +1,25 @@
+{
+  "name": "5.1_manager_file",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node src/index.js",
+    "test": "jest",
+    "dev": "node --watch src/index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "dependencies": {
+    "chalk": "^6.0.0"
+  },
+  "devDependencies": {
+    "jest": "^30.4.2"
+  }
+}
