@@ -101,9 +101,19 @@ async function bacaDenganTimeout(namaFile, detik) {
 console.log('\n\n===== Tugas 3 -- Antrian Async =====');
 
 async function prosesAntrian(antrian) {
+	let ms = 0;
+
 	for (let i=0; i<antrian.length; i++) {
+		if (i % 2 === 0) {
+			ms = 2500;
+		} else if (i === 4) {
+			ms = 1200;
+		} else {
+			ms = 500;
+		}
+
 		console.log('Memproses: ' + antrian[i]);
-		await new Promise((r) => setTimeout(r, 2000));
+		await new Promise((r) => setTimeout(r, ms));
 		console.log('Selesai: ' + antrian[i]);
 	}
 
