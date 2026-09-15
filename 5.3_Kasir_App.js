@@ -64,3 +64,9 @@ function hitungSubTotal() {
 
   return total;
 }
+
+function hitungDiskon(total) {
+  if (total >= 50000) return total * 0.1;
+  if (total >= 30000) return total * 0.05;
+  return 0;
+}
