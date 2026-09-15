@@ -55,3 +55,12 @@ function tambahItem(id, jumlah) {
 
   console.log(`${item.nama} x${jumlah} ditambahkan`);
 }
+
+function hitungSubTotal() {
+  let total = 0;
+  for (let i = 0; i < keranjang.length; i++) {
+    total += keranjang[i].harga * keranjang[i].jumlah;
+  }
+
+  return total;
+}
